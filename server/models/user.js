@@ -4,11 +4,26 @@ const Joi = require("joi");
 const passwordComplexity = require("joi-password-complexity");
 
 const userSchema = new mongoose.Schema({
-	firstName: { type: String, required: true },
-	lastName: { type: String, required: true },
-	email: { type: String, required: true },
-	password: { type: String, required: true },
-	verified: { type: Boolean, default: false },
+	firstName: { 
+		type: String, 
+		required: true 
+	},
+	lastName: { 
+		type: String, 
+		required: true 
+	},
+	email: { 
+		type: String, 
+		required: true 
+	},
+	password: { 
+		type: String, 
+		required: true 
+	},
+	verified: { 
+		type: Boolean, 
+		default: false 
+	},
 });
 
 userSchema.methods.generateAuthToken = function () {

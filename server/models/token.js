@@ -8,8 +8,15 @@ const tokenSchema = new Schema({
 		ref: "user",
 		unique: true,
 	},
-	token: { type: String, required: true },
-	createdAt: { type: Date, default: Date.now, expires: 3600 },
+	token: { 
+		type: String, 
+		required: true 
+	},
+	createdAt: { 
+		type: Date, 
+		default: Date.now, 
+		expires: 3600 
+	},
 });
 
 module.exports = mongoose.model("token", tokenSchema);
